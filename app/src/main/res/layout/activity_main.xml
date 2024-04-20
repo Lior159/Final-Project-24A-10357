@@ -1,38 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="32dp"
     tools:context=".MainActivity">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/main_LBL_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="Hello World"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="50sp"/>
+    <View
+        android:layout_width="75sp"
+        android:layout_height="15sp"
+        android:layout_marginTop="100sp"
+        android:layout_marginStart="10sp"
+        android:background="#ff0000"
+        android:id="@+id/viewOverdue"/>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/main_ET_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:hint="text to update"/>
+    <View
+        android:layout_width="75sp"
+        android:layout_height="15sp"
+        android:layout_marginTop="100sp"
+        android:layout_marginStart="2sp"
+        android:background="#FFDD00"
+        android:layout_toEndOf="@+id/viewOverdue"
+        android:id="@+id/viewActive"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/main_BTN_update"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Update Title" />
+    <View
+        android:layout_width="75sp"
+        android:layout_height="15sp"
+        android:layout_marginTop="100sp"
+        android:layout_marginStart="2sp"
+        android:background="#00FF00"
+        android:layout_toEndOf="@+id/viewActive"
+        android:id="@+id/viewDone"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/main_BTN_save"
-        android:layout_width="match_parent"
+    <EditText
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save Garage"/>
-</androidx.appcompat.widget.LinearLayoutCompat>
+        android:hint="Enter Overdue"
+        android:id="@+id/editOverdue"
+        android:layout_below="@+id/viewActive"
+        android:layout_marginTop="100sp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Active"
+        android:layout_below="@+id/editOverdue"
+        android:id="@+id/editActive"
+        android:layout_marginTop="2sp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Done"
+        android:layout_below="@+id/editActive"
+        android:id="@+id/editDone"
+        android:layout_marginTop="2sp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:id="@+id/btnSubmit"
+        android:layout_below="@id/editDone"
+        android:layout_marginTop="20sp"/>
+</RelativeLayout>

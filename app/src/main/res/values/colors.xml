@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="grey_800">#424242</color>
+    <color name="deep_purple_200">#B39DDB</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue_900">#0D47A1</color>
+    <color name="purple_900">#4A148C</color>
+    <color name="brown_800">#4E342E</color>
     <color name="lightblue_100">#B3E5FC</color>
     <color name="red_700">#D50000</color>
 </resources>

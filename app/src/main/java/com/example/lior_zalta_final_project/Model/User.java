@@ -57,6 +57,4 @@ public class User {
         this.budget = budget;
         return this;
     }
-
-
 }

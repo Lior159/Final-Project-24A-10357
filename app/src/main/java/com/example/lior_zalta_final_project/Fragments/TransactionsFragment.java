@@ -73,11 +73,10 @@ public class TransactionsFragment extends Fragment {
         ArrayList<Transaction> filteredTransactions = new ArrayList<Transaction>();
         for (Transaction transaction: LoggedInUser.getUser().getTransactions()) {
             String[] dateParts = transaction.getDate().split("-");
-            String category = transaction.getCategory();
             String year = dateParts[2];
             String month = dateParts[1];
 
-            boolean validCategory = categoryFilter.equals("") || categoryFilter.equals("All") || categoryFilter.equals(category);
+            boolean validCategory = categoryFilter.equals("") || categoryFilter.equals("All") || categoryFilter.equals(transaction.getCategory());
             boolean validYear = yearFilter.equals("") || yearFilter.equals("All") || yearFilter.equals(year);
             boolean validMonth = monthFilter.equals("") || monthFilter.equals("All") || monthFilter.equals(month);
 

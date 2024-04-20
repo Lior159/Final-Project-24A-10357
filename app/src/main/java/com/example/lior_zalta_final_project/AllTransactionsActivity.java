@@ -25,7 +25,7 @@ public class AllTransactionsActivity extends AppCompatActivity {
     private AutoCompleteTextView all_transactions_DROPDOWN_year;
     private AutoCompleteTextView all_transactions_DROPDOWN_month;
     private ArrayList<String> categories;
-    private String[] years = {"All", "2024", "2023", "2022", "2021"};
+    private String[] years = {"All", "2027", "2026", "2024", "2024", "2023", "2022", "2021"};
     private String[] months = {"All", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"};
     private String categoryFilter = "";
     private String yearFilter = "";
@@ -111,8 +111,7 @@ public class AllTransactionsActivity extends AppCompatActivity {
     }
 
     private void redirectToMainMenuPage() {
-        Intent mainManuIntent = new Intent(this, MenuActivity.class);
-        startActivity(mainManuIntent);
+        startActivity(new Intent(this, MenuActivity.class));
         finish();
     }
 
