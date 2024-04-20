@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_LBL_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Hello World"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="50sp"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/main_ET_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="text to update"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_BTN_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_BTN_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Garage"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

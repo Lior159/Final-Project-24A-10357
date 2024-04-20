@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "611152165884",
+    "firebase_url": "https://lior-zalta-final-project-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "lior-zalta-final-project",
+    "storage_bucket": "lior-zalta-final-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611152165884:android:f92bbea8e98d93ebca5079",
+        "android_client_info": {
+          "package_name": "com.example.lior_zalta_final_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwhuCiUBepS8igU8JSrl3svACIo4ZSUlA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
