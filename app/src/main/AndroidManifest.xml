@@ -24,9 +24,6 @@
             android:name=".NewTransactionActivity"
             android:exported="false" />
         <activity
-            android:name=".UploadFileActivity"
-            android:exported="false" />
-        <activity
             android:name=".AllTransactionsActivity"
             android:exported="false" />
         <activity

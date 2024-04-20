@@ -25,7 +25,7 @@ public class AllTransactionsActivity extends AppCompatActivity {
     private AutoCompleteTextView all_transactions_DROPDOWN_year;
     private AutoCompleteTextView all_transactions_DROPDOWN_month;
     private ArrayList<String> categories;
-    private String[] years = {"All", "2027", "2026", "2024", "2024", "2023", "2022", "2021"};
+    private String[] years = {"All", "2027", "2026", "2025", "2024", "2023", "2022", "2021"};
     private String[] months = {"All", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"};
     private String categoryFilter = "";
     private String yearFilter = "";
@@ -62,7 +62,6 @@ public class AllTransactionsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 categoryFilter = parent.getItemAtPosition(position).toString();
                 filterTransactions();
-//                Toast.makeText(AllTransactionsActivity.this, "Item: " + item, Toast.LENGTH_SHORT).show();
             }
         });
 

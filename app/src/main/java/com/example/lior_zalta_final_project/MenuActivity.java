@@ -15,7 +15,6 @@ public class MenuActivity extends AppCompatActivity {
     private MaterialButton menu_BTN_new_transaction;
     private MaterialButton login_BTN_set_overview;
     private MaterialButton menu_BTN_all_transactions;
-    private MaterialButton menu_BTN_upload_file;
     private MaterialButton login_BTN_set_budget;
 
 
@@ -32,7 +31,6 @@ public class MenuActivity extends AppCompatActivity {
         menu_BTN_new_transaction = findViewById(R.id.menu_BTN_new_transaction);
         menu_BTN_all_transactions = findViewById(R.id.menu_BTN_all_transactions);
         login_BTN_set_overview = findViewById(R.id.login_BTN_set_overview);
-        menu_BTN_upload_file = findViewById(R.id.menu_BTN_upload_file);
         login_BTN_set_budget = findViewById(R.id.login_BTN_set_budget);
     }
 
@@ -40,18 +38,12 @@ public class MenuActivity extends AppCompatActivity {
     private void initViews() {
         menu_BTN_new_transaction.setOnClickListener(v -> redirectToNewTransactionPage());
         menu_BTN_all_transactions.setOnClickListener(v -> redirectToAllTransactionsPage());
-        menu_BTN_upload_file.setOnClickListener(v -> redirectToUploadFilePage());
         login_BTN_set_budget.setOnClickListener(v -> redirectToSetBudgetPage());
         login_BTN_set_overview.setOnClickListener(v -> redirectToOverViewPage());
     }
 
     private void redirectToSetBudgetPage() {
         startActivity(new Intent(this, SetBudgetActivity.class));
-        finish();
-    }
-
-    private void redirectToUploadFilePage() {
-        startActivity(new Intent(this, UploadFileActivity.class));
         finish();
     }
 

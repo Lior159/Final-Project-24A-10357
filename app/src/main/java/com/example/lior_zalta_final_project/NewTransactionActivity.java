@@ -11,6 +11,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.DatePicker;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.example.lior_zalta_final_project.Model.LoggedInUser;
 import com.example.lior_zalta_final_project.Model.Transaction;
@@ -85,37 +86,30 @@ public class NewTransactionActivity extends AppCompatActivity {
         Double amount = Double.parseDouble(new_transaction_ET_amount.getText().toString());
 
         String[] dateParts = date.split("-");
-        int day =   Integer.parseInt(dateParts[0]);
+        int day = Integer.parseInt(dateParts[0]);
         int month = Integer.parseInt(dateParts[1]);
         int year = Integer.parseInt(dateParts[2]);
 
-        for (int i = 0; i < payments; i++){
-            month = month + i;
-            if (month == 13){
+        for (int i = 0; i < payments; i++) {
+            if (month == 13) {
                 month = 1;
                 year++;
             }
             Log.d("Date", day + "-" + month + "-" + year);
 
-
             Transaction transaction = new Transaction();
             transaction.setLabel(label)
                     .setCategory(category)
                     .setDate(day + "-" + month + "-" + year)
-                    .setAmount(amount/payments);
+                    .setAmount(amount / payments);
             user.getTransactions().add(transaction);
+            month++;
         }
-
-
-//        Double totalAmount = user.getTotalTransactionsAmount().get(date);
-//        if (totalAmount == null)
-//            user.getTotalTransactionsAmount().put(date, amount);
-//        user.getTotalTransactionsAmount().put(date, amount + totalAmount);
-
-//        user.getTotalTransactionsAmount().merge(date, amount, (oldValue, newValue) -> oldValue + newValue);
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("users").child(user.getUsername());
         ref.setValue(user);
+        Toast.makeText(this, "Transaction Created!", Toast.LENGTH_SHORT).show();
+        redirectToMenuPage();
     }
 
     private void showCalendar() {
